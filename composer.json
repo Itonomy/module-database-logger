@@ -1,0 +1,21 @@
+{
+  "name": "itonomy/module-database-logger",
+  "version": "1.0.0",
+  "description": "Magento 2 Module which extends default monolog logger to log into database instead of files",
+  "type": "magento2-module",
+  "require": {
+      "php": "~7.4.0||~8.1.0",
+      "magento/framework": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Itonomy\\DatabaseLogger\\": ""
+    }
+  }
+}

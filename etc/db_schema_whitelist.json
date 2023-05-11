@@ -1,0 +1,15 @@
+{
+    "entity_log": {
+        "column": {
+            "id": true,
+            "log_entity_type": true,
+            "log_entity_id": true,
+            "log_type": true,
+            "log_text": true,
+            "time": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
