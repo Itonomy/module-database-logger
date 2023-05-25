@@ -21,7 +21,7 @@ Example usage:
 ```php
 <?php
 $this->logger->info('test log message', ['test_var' => 'test']);
-$this->logger->info('test log message', ['test_var' => 'test', 'entity_type' => 'import', 'entity_id' => 99999]);
+$this->logger->info('test log message', ['test_var' => 'test', 'entity_type' => 'import', 'entity_id' => '99999']);
 ?>
 ```
 

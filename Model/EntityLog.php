@@ -60,7 +60,7 @@ class EntityLog extends AbstractModel implements EntityLogInterface
     /**
      * @inheritDoc
      */
-    public function getLogEntityId(): int
+    public function getLogEntityId(): string
     {
         return $this->getData(self::LOG_ENTITY_ID);
     }
@@ -68,7 +68,7 @@ class EntityLog extends AbstractModel implements EntityLogInterface
     /**
      * @inheritDoc
      */
-    public function setLogEntityId(?int $logEntityId): void
+    public function setLogEntityId(?string $logEntityId): void
     {
         $this->setData(self::LOG_ENTITY_ID, $logEntityId);
     }

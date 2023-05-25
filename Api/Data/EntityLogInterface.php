@@ -49,18 +49,18 @@ interface EntityLogInterface
     /**
      * Getter for LogEntityId.
      *
-     * @return int
+     * @return string
      */
-    public function getLogEntityId(): ?int;
+    public function getLogEntityId(): ?string;
 
     /**
      * Setter for LogEntityId.
      *
-     * @param int|null $logEntityId
+     * @param string|null $logEntityId
      *
      * @return void
      */
-    public function setLogEntityId(?int $logEntityId): void;
+    public function setLogEntityId(?string $logEntityId): void;
 
     /**
      * Getter for LogText.

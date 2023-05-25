@@ -77,9 +77,9 @@ class DatabaseHandler extends AbstractHandler implements FormattableHandlerInter
         }
         $formatted = $this->formatter->format($record);
         $data = [
-            'log_type' => $record['level_name'],
-            'log_entity_type' => $logEntityType,
-            'log_entity_id' => $logEntityId,
+            'log_type' => (string) $record['level_name'],
+            'log_entity_type' => (string) $logEntityType,
+            'log_entity_id' => (string) $logEntityId,
             'log_text' => (string) $formatted
         ];
 
