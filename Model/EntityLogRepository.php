@@ -78,16 +78,13 @@ class EntityLogRepository implements EntityLogRepositoryInterface
 
     /**
      * @inheritDoc
-     * @throws NoSuchEntityException
+     * @param $id
+     * @return ResourceModel\EntityLog\Collection
      */
-    public function getByLogEntityId($id): EntityLogInterface
+    public function getByLogEntityId($id): ResourceModel\EntityLog\Collection
     {
-        $entityLog = $this->entityLogFactory->create();
-        $this->resource->load($entityLog, $id, 'log_entity_id');
-        if (!$entityLog->getId()) {
-            throw new NoSuchEntityException(__('The Entity Log with the "%1" ID doesn\'t exist.', $id));
-        }
-        return $entityLog;
+        return $this->collectionFactory->create()
+            ->addFieldToFilter('log_entity_id', ['eq' => $id]);
     }
 
     /**

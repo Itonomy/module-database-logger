@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Itonomy\DatabaseLogger\Api;
 
 use Itonomy\DatabaseLogger\Api\Data\EntityLogInterface;
+use Itonomy\DatabaseLogger\Model\ResourceModel\EntityLog\Collection;
 use Itonomy\DatabaseLogger\Api\Data\EntityLogSearchResultsInterface;
 use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\Exception\LocalizedException;
@@ -19,17 +20,15 @@ interface EntityLogRepositoryInterface
 
     /**
      * @param $id
-     * @return EntityLogInterface
+     * @return Collection
      */
-    public function getByLogEntityId($id): EntityLogInterface;
-
+    public function getByLogEntityId($id): Collection;
 
     /**
      * @param EntityLogInterface $entityLog
      * @return EntityLogInterface
      */
     public function save(EntityLogInterface $entityLog): EntityLogInterface;
-
 
     /**
      * Retrieve entity logs matching the specified criteria.
