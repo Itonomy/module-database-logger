@@ -2,7 +2,7 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="entity_log" resource="default" engine="innodb"
-           comment="Katana PIM Table for storing import data">
+           comment="Table for storing import data">
         <column xsi:type="int" name="id" padding="10" unsigned="true"
                 nullable="false" identity="true" comment="Id"/>
         <column xsi:type="varchar" name="log_entity_type"
